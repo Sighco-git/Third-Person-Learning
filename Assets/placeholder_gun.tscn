@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://cwqbmtgbbd2bq"]
 
+[ext_resource type="PackedScene" uid="uid://x6roe4lset63" path="res://Assets/MuzzleSpawner.tscn" id="1_18hmh"]
+
 [sub_resource type="BoxMesh" id="BoxMesh_48r7e"]
 size = Vector3(0.05, 0.2, 0.4)
 
@@ -17,5 +19,5 @@ mesh = SubResource("BoxMesh_48r7e")
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.06520912, -0.3220334)
 mesh = SubResource("CylinderMesh_18hmh")
 
-[node name="Muzzle" type="Marker3D" parent="Reciever/Barrel" unique_id=1711545571]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25441068, 7.450581e-09)
+[node name="Muzzle" parent="Reciever/Barrel" unique_id=1953549501 instance=ExtResource("1_18hmh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25243747, 0)

@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://x6roe4lset63"]
+
+[ext_resource type="Script" uid="uid://dsd4ea5iwijru" path="res://Assets/dynamic_crosshair.gd" id="1_vfrsh"]
+
+[sub_resource type="Gradient" id="Gradient_rolyv"]
+offsets = PackedFloat32Array(0.31325302, 0.36144578, 0.40963855, 0.5, 0.5421687)
+colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_vfrsh"]
+gradient = SubResource("Gradient_rolyv")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="Muzzle" type="Marker3D" unique_id=1953549501]
+
+[node name="MuzzleRaycast" type="RayCast3D" parent="." unique_id=1848311737]
+target_position = Vector3(0, -100, 0)
+
+[node name="DynamicCrosshair" type="Sprite3D" parent="MuzzleRaycast" unique_id=547309107]
+billboard = 1
+double_sided = false
+no_depth_test = true
+texture = SubResource("GradientTexture2D_vfrsh")
+script = ExtResource("1_vfrsh")
