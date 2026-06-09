@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cwqbmtgbbd2bq"]
 
-[ext_resource type="PackedScene" uid="uid://x6roe4lset63" path="res://Assets/MuzzleSpawner.tscn" id="1_18hmh"]
+[ext_resource type="PackedScene" uid="uid://x6roe4lset63" path="res://Weapons/Systems/MuzzleSpawner.tscn" id="1_18hmh"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_48r7e"]
 size = Vector3(0.05, 0.2, 0.4)

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dkdvljs4sgnut"]
 
-[ext_resource type="Script" uid="uid://0cm30arixmsh" path="res://player.gd" id="1_l8h54"]
-[ext_resource type="PackedScene" uid="uid://cwqbmtgbbd2bq" path="res://Assets/placeholder_gun.tscn" id="3_btcbx"]
+[ext_resource type="Script" uid="uid://0cm30arixmsh" path="res://Player/player.gd" id="1_l8h54"]
+[ext_resource type="PackedScene" uid="uid://cwqbmtgbbd2bq" path="res://Weapons/placeholder_gun.tscn" id="3_btcbx"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4ntmi"]
 

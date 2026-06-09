@@ -13,7 +13,6 @@ config_version=5
 config/name="Third Person Action Learning"
 run/main_scene="uid://csqdxedb5sey3"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
 
 [input]
 
