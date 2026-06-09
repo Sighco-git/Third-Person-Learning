@@ -20,6 +20,7 @@ target_position = Vector3(0, -100, 0)
 
 [node name="DynamicCrosshair" type="Sprite3D" parent="MuzzleRaycast" unique_id=547309107]
 transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0, 0, 0)
+top_level = true
 billboard = 1
 double_sided = false
 no_depth_test = true

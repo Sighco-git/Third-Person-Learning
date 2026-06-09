@@ -5,12 +5,14 @@ extends Sprite3D
 # Called when the node enters the scene tree for the first time.
 
 func _ready() -> void:
-	pass # Replace with function body.
-
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta: float) -> void:
-	if muzzle_raycast.is_colliding() && Input.is_action_just_pressed("attack"):
+func _process(delta: float) -> void:
+	update_crosshair(delta)
+
+func update_crosshair(delta: float) -> void:
+	muzzle_raycast.force_raycast_update()
+	if muzzle_raycast.is_colliding():
 		var predicted_shot = muzzle_raycast.get_collision_point()
-		global_position = lerp(global_position, predicted_shot, weight) * delta
-		print(predicted_shot)
+		global_position = lerp(global_position, predicted_shot, weight * delta)

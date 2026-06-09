@@ -14,6 +14,7 @@ material = SubResource("StandardMaterial3D_btcbx")
 [sub_resource type="SphereShape3D" id="SphereShape3D_l8h54"]
 
 [node name="Player" type="CharacterBody3D" unique_id=2039430407]
+collision_layer = 2
 script = ExtResource("1_l8h54")
 
 [node name="PlayerCollision" type="CollisionShape3D" parent="." unique_id=2117958441]
@@ -21,11 +22,6 @@ shape = SubResource("CapsuleShape3D_4ntmi")
 
 [node name="PlaceholderMesh" type="MeshInstance3D" parent="." unique_id=1560703926]
 mesh = SubResource("CapsuleMesh_gwnis")
-
-[node name="WeaponLag" type="Node3D" parent="PlaceholderMesh" unique_id=897631823]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.58505315, 0.13468242, -0.22345167)
-
-[node name="PlaceholderGun" parent="PlaceholderMesh/WeaponLag" unique_id=1260822461 instance=ExtResource("3_btcbx")]
 
 [node name="Pivot" type="Node3D" parent="." unique_id=1555723502]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39361286, 0)
@@ -36,3 +32,6 @@ shape = SubResource("SphereShape3D_l8h54")
 spring_length = 5.0
 
 [node name="PlayerCamera" type="Camera3D" parent="Pivot/SpringArm3D" unique_id=1203522484]
+
+[node name="PlaceholderGun" parent="Pivot" unique_id=1260822461 instance=ExtResource("3_btcbx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.63763475, -0.51894665, 0)
