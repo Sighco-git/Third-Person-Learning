@@ -4,6 +4,7 @@ extends CharacterBody3D
 @onready var spring_arm_3d: SpringArm3D = $Pivot/SpringArm3D
 @onready var pivot: Node3D = $Pivot
 @export var sensitivity := 0.005
+@onready var weapon_holder: Node3D = $Pivot/WeaponHolder
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
@@ -19,6 +20,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			deg_to_rad(-75),   # looking down limit
 			deg_to_rad(20)     # looking up limit
 		)
+		weapon_holder.global_rotation.x = spring_arm_3d.rotation.x
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
