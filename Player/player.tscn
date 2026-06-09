@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dkdvljs4sgnut"]
 
 [ext_resource type="Script" uid="uid://0cm30arixmsh" path="res://player.gd" id="1_l8h54"]
+[ext_resource type="PackedScene" uid="uid://cwqbmtgbbd2bq" path="res://Assets/placeholder_gun.tscn" id="3_btcbx"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4ntmi"]
 
@@ -20,6 +21,11 @@ shape = SubResource("CapsuleShape3D_4ntmi")
 
 [node name="PlaceholderMesh" type="MeshInstance3D" parent="." unique_id=1560703926]
 mesh = SubResource("CapsuleMesh_gwnis")
+
+[node name="WeaponLag" type="Node3D" parent="PlaceholderMesh" unique_id=897631823]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.58505315, 0.13468242, -0.22345167)
+
+[node name="PlaceholderGun" parent="PlaceholderMesh/WeaponLag" unique_id=1260822461 instance=ExtResource("3_btcbx")]
 
 [node name="Pivot" type="Node3D" parent="." unique_id=1555723502]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39361286, 0)
