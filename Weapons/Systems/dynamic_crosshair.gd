@@ -1,7 +1,7 @@
 extends Sprite3D
 
 @onready var muzzle_raycast: RayCast3D = $".."
-@export var weight := 1.0
+@export var weight := 15.0
 # Called when the node enters the scene tree for the first time.
 
 func _ready() -> void:

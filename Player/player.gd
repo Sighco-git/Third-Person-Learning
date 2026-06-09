@@ -18,7 +18,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		spring_arm_3d.rotation.x = clamp(
 			spring_arm_3d.rotation.x,
 			deg_to_rad(-75),   # looking down limit
-			deg_to_rad(20)     # looking up limit
+			deg_to_rad(70)     # looking up limit
 		)
 		weapon_holder.global_rotation.x = spring_arm_3d.rotation.x
 
