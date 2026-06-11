@@ -42,7 +42,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.5, -25.5)
 size = Vector3(50, 20, 1)
 
 [node name="Wall5" type="CSGBox3D" parent="Ground" unique_id=1275051669]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.8, 5.5, -24.5)
+transform = Transform3D(0.711548, 0, -0.70263755, 0, 1, 0, 0.70263755, 0, 0.711548, 19.155258, 5.5, -21.29285)
 size = Vector3(25, 10, 1)
 
 [node name="Wall6" type="CSGBox3D" parent="Ground" unique_id=1142166056]
@@ -56,6 +56,18 @@ size = Vector3(50, 20, 1)
 [node name="Wall4" type="CSGBox3D" parent="Ground" unique_id=995175713]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -25.5, 10.5, 0)
 size = Vector3(50, 20, 1)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Ground" unique_id=15570914]
+transform = Transform3D(0.9474897, 0, -0.31978628, 0, 1, 0, 0.31978628, 0, 0.9474897, 10.348795, 1.5, -22.059278)
+size = Vector3(2, 2, 2)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Ground" unique_id=551960512]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.520647, 1.5, -15.373043)
+size = Vector3(2, 2, 2)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Ground" unique_id=1891033538]
+transform = Transform3D(0.99699897, 0, 0.07741508, 0, 1, 0, -0.07741508, 0, 0.99699897, -23.520647, 2.5, -17.694687)
+size = Vector3(2, 4, 2)
 
 [node name="Player" parent="." unique_id=2039430407 instance=ExtResource("1_7t7j1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

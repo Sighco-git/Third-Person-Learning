@@ -2,7 +2,7 @@
 extends Sprite3D
 
 @onready var muzzle_raycast: RayCast3D = $".."
-@export var weight := 15.0
+@export var weight := 25.0 # Higher is snappier
 
 func _process(delta: float) -> void:
 	update_crosshair(delta)
