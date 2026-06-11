@@ -51,9 +51,10 @@ layout_mode = 2
 script = ExtResource("3_gwnis")
 
 [node name="WeaponHolder" type="Node3D" parent="." unique_id=2058093688 node_paths=PackedStringArray("recenter_muzzle")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2.3936129, 0)
 script = ExtResource("3_k53q1")
 recenter_muzzle = NodePath("../Pivot/SpringArm3D/PlayerCamera/RecenterMuzzle")
 
-[node name="PlaceholderGun" parent="WeaponHolder" unique_id=1260822461 instance=ExtResource("3_btcbx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6106005, -2.444568, -0.10979223)
+[node name="WeaponPivot" type="Node3D" parent="WeaponHolder" unique_id=190986000]
+
+[node name="PlaceholderGun" parent="WeaponHolder/WeaponPivot" unique_id=1260822461 instance=ExtResource("3_btcbx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.58421457, 0.255283, -0.12552267)
