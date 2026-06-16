@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://0cm30arixmsh" path="res://Player/player.gd" id="1_l8h54"]
 [ext_resource type="PackedScene" uid="uid://cwqbmtgbbd2bq" path="res://Weapons/placeholder_gun.tscn" id="3_btcbx"]
-[ext_resource type="Script" uid="uid://d2hno15y3k3u6" path="res://Player/control.gd" id="3_gwnis"]
+[ext_resource type="Script" uid="uid://d2hno15y3k3u6" path="res://Weapons/Systems/Crosshair/static_crosshair.gd" id="3_gwnis"]
 [ext_resource type="Script" uid="uid://cvahem8pkuvm0" path="res://Player/weapon_holder.gd" id="3_k53q1"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4ntmi"]
@@ -56,5 +56,5 @@ recenter_muzzle = NodePath("../Pivot/SpringArm3D/PlayerCamera/RecenterMuzzle")
 
 [node name="WeaponPivot" type="Node3D" parent="WeaponHolder" unique_id=190986000]
 
-[node name="PlaceholderGun" parent="WeaponHolder/WeaponPivot" unique_id=1260822461 instance=ExtResource("3_btcbx")]
+[node name="HitscanWeapon" parent="WeaponHolder/WeaponPivot" unique_id=1260822461 instance=ExtResource("3_btcbx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.58421457, 0.255283, -0.12552267)

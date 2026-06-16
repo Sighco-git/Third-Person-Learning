@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Third Person Action Learning"
+config/name="Third Person Action Learning (Copy)"
 run/main_scene="uid://csqdxedb5sey3"
 config/features=PackedStringArray("4.6", "Forward Plus")
 

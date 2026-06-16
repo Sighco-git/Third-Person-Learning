@@ -9,6 +9,8 @@ extends CharacterBody3D
 # Visuals
 @onready var weapon_holder: Node3D = $WeaponHolder
 @onready var placeholder_mesh: MeshInstance3D = $PlaceholderMesh
+# Weapons
+@onready var hitscan_weapon: Node3D = $WeaponHolder/WeaponPivot/HitscanWeapon
 
 const SPEED = 5.0
 
@@ -45,4 +47,5 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 	# Rotate player mesh to match input direction.
 	placeholder_mesh.rotation.y = input_dir.angle()
+	hitscan_weapon.shoot()
 	move_and_slide()

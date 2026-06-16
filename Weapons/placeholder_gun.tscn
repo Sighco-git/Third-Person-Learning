@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cwqbmtgbbd2bq"]
 
-[ext_resource type="PackedScene" uid="uid://x6roe4lset63" path="res://Weapons/Systems/MuzzleSpawner.tscn" id="1_18hmh"]
+[ext_resource type="Script" uid="uid://ctm4omo8v6lbo" path="res://Weapons/hitscan_weapon.gd" id="1_bcqbt"]
+[ext_resource type="Texture2D" uid="uid://c84rndptym4my" path="res://Weapons/Systems/Crosshair/DynamicDimGray1.tres" id="1_w2gkp"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_48r7e"]
 size = Vector3(0.05, 0.2, 0.4)
@@ -10,7 +11,10 @@ top_radius = 0.025
 bottom_radius = 0.025
 height = 0.5
 
-[node name="PlaceholderGun" type="Node3D" unique_id=1260822461]
+[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_bcqbt"]
+
+[node name="HitscanWeapon" type="Node3D" unique_id=1260822461]
+script = ExtResource("1_bcqbt")
 
 [node name="Reciever" type="MeshInstance3D" parent="." unique_id=802857171]
 mesh = SubResource("BoxMesh_48r7e")
@@ -19,5 +23,22 @@ mesh = SubResource("BoxMesh_48r7e")
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.06520912, -0.3220334)
 mesh = SubResource("CylinderMesh_18hmh")
 
-[node name="Muzzle" parent="Reciever/Barrel" unique_id=1953549501 instance=ExtResource("1_18hmh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25243747, 0)
+[node name="Muzzle" type="Marker3D" parent="." unique_id=1953549501]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06520913, -0.5744709)
+
+[node name="MuzzleRaycast" type="RayCast3D" parent="Muzzle" unique_id=1848311737]
+target_position = Vector3(0, 0, -100)
+
+[node name="CrosshairSpring" type="SpringArm3D" parent="." unique_id=1039070853]
+transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0.06520913, -0.5744709)
+shape = SubResource("SeparationRayShape3D_bcqbt")
+spring_length = 100.0
+
+[node name="DynamicCrosshair" type="Sprite3D" parent="CrosshairSpring" unique_id=547309107]
+transform = Transform3D(0.013, 0, 0, 0, 0.013, 0, 0, 0, 0.013, 0, 0, 0)
+top_level = true
+billboard = 1
+double_sided = false
+no_depth_test = true
+fixed_size = true
+texture = ExtResource("1_w2gkp")

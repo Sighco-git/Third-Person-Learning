@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bx8w16lx0xynu"]
+
+[sub_resource type="Curve" id="Curve_xko4h"]
+_limits = [0.0, 100.0, 0.0, 1.0]
+_data = [Vector2(0.02325581, 0), 0.0, 0.0, 0, 0, Vector2(1, 100), 464.5636, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_nevuv"]
+curve = SubResource("Curve_xko4h")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_t8yxw"]
+lifetime_randomness = 0.5
+direction = Vector3(0, 0, -1)
+spread = 65.0
+initial_velocity_min = 1.0
+initial_velocity_max = 10.0
+angular_velocity_min = 191.01997
+angular_velocity_max = 337.96
+damping_max = 13.1310005
+damping_curve = SubResource("CurveTexture_nevuv")
+scale_max = 2.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uxxde"]
+albedo_color = Color(0.29803923, 0.29803923, 0.29803923, 0.29411766)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3dlyy"]
+material = SubResource("StandardMaterial3D_uxxde")
+size = Vector3(0.05, 0.05, 0.05)
+
+[node name="Dust" type="GPUParticles3D" unique_id=610211495]
+emitting = false
+amount = 56
+lifetime = 0.5
+one_shot = true
+process_material = SubResource("ParticleProcessMaterial_t8yxw")
+draw_pass_1 = SubResource("BoxMesh_3dlyy")
